@@ -1,7 +1,7 @@
 *{
     padding : 0;
     margin: 0;
-    color: #eee;
+    color: #29339B;
     text-align: center; 
 }
 
@@ -10,24 +10,24 @@ html,body{
 }
 
 .main-container{
-    border: 4px solid rgb(255, 122, 0);
+    border: 4px solid #74A4BC;
     border-radius: 20px;
     margin: 2rem;
     background-color: rgb(50, 50, 50);
 }
 
 nav, section, footer, article, aside{
-    border: 2px solid rgb(8, 214, 146);
+    border: 2px solid rgb(55, 122, 100);
     margin: 1rem;
     border-radius: 10px;
     padding: 1rem;
 }
 
 article, aside{
-    width:30%;
+    width:40%;
     display: inline-block;
     height: 300px;
-    background-color: rgb(107, 107, 107);
+    background-color: #B6D6CC;
 }
 
 nav, section, footer{
