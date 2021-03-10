@@ -1,0 +1,54 @@
+/*
+Vamos a crear animaciones con el uso de css
+a partir de condicionales
+@palabras reservadas
+*/
+/*Transición de colores*/
+@keyframes animacion_test{
+    from{
+        background-color: red;
+    }
+    to{
+        background-color: yellow;
+    }
+}
+
+/*Transformación para que gire el círculo*/
+
+@keyframes girar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/*Transformación para que gire mi carita kawaii*/
+
+@keyframes label-animation{
+    from{
+        transform: rotate(0deg);
+        margin-left: 0;
+    }
+    to{
+        transform: rotate(180deg);
+        margin-left: 85vw;
+    }
+}
+
+.container-label{
+    border: 5px solid rgb(89, 90, 10);
+    width:100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.label{
+    width: 64px;
+    background-color: rgb(60, 189, 85);
+    color: white;
+    font-size: 1.3rem;
+    padding: 1rem;
+    border-radius: 20px;
+}
