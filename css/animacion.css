@@ -38,7 +38,6 @@ a partir de condicionales
 }
 
 .container-label{
-    border: 5px solid rgb(89, 90, 10);
     width:100%;
     padding: 1rem;
     box-sizing: border-box;
@@ -51,4 +50,11 @@ a partir de condicionales
     font-size: 1.3rem;
     padding: 1rem;
     border-radius: 20px;
+    text-align: center;
+    /*Aquí va la animación*/
+    animation-name: label-animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
