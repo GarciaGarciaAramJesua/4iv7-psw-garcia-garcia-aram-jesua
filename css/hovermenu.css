@@ -77,7 +77,7 @@ hr{
     transform: translateY(100%);
 }
 
-.menu a:hover span:first-child,
+.menu a:hover span:last-child,
 .menu[data-animation] a:hover span:last-child{
     transform: none;
 }
