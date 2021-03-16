@@ -1,0 +1,292 @@
+@keyframes girar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.mititulo{
+    width: 100%;
+    background-color: #457b9d;
+    color: white;
+    text-align: left;
+    height: 200px;
+    display: inline-block;
+    justify-content: left;
+    align-items: left;
+    margin: 0;
+    padding:0;
+}
+
+.mititulo img{
+    border-radius: 50%;
+    animation: girar 4s linear infinite;
+}
+
+article{
+    padding-left: 10px;
+    width:35%;
+    height: 100%;
+    font: arial;
+    background-color: #003049;
+    padding: 0;
+    margin:0;
+}
+
+article i{
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 50px;
+    color: #72efdd;
+}
+
+article p{
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color:#eae2b7;
+}
+
+article h3{
+    text-align: center;
+    font-weight: bold;
+    color: #212ff1;
+}
+
+.contacto{
+    display:inline-flex;
+}
+
+.correo1{
+    display: inline-flex;
+    padding:0;
+    margin-bottom: 0;
+}
+
+.correo2 p{
+    margin-left: 95px;
+    padding: 0;
+    margin-top: 0;
+}
+
+.facebook{
+    display: inline-flex;
+}
+
+.loader1{
+    margin-left: 210px;
+    width: 30px;
+    height: 30px;
+    border: 5px solid #72efdd;
+    border-top: 5px solid #212ff1;
+    border-radius: 50%;
+    animation: girar 2s linear infinite;
+}
+
+.skills p{
+    margin-left: 30px;
+    color:#72efdd;
+}
+
+.skills i{
+    margin-left: 15px;
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+.analitico, .matematico{
+    display:inline-flex;
+}
+
+.lider, .creativo{
+    display:inline-flex;
+}
+
+.creativo p{
+    margin-left: 13px;
+}
+
+.matematico p{
+    margin-left: 13px;
+}
+
+.irresponsable p{
+    margin-left: 37px;
+}
+
+.innovador, .irresponsable{
+    display: inline-flex;
+}
+
+.analitico i{
+    margin-left: 53px;
+}
+
+.lider i{
+    margin-left: 88px;
+}
+
+.matematico i{
+    margin-left: 32px;
+}
+
+.creativo i{
+    margin-left: 68px;
+}
+
+.innovador i{
+    margin-left: 40px;
+}
+
+.irresponsable p{
+    margin-left: 15px;
+}
+
+.irresponsable i{
+    margin-left: 14px;
+}
+
+.perseverante, .autodidacta{
+    display: inline-flex;
+}
+
+.autodidacta p{
+    margin-left: 13px;
+}
+
+.autodidacta i{
+    margin-left: 33px;
+}
+
+.perseverante i{
+    margin-left: 12px;
+    margin-top: 10px;
+}
+
+.loader2{
+    margin-left: 210px;
+    width: 30px;
+    height: 30px;
+    border: 5px solid #72efdd;
+    border-top: 5px solid #212ff1;
+    border-radius: 50%;
+    animation: girar 2s linear infinite;
+}
+
+.lenguajes p{
+    margin-left: 60px;
+    color:#72efdd;
+}
+
+.lenguajes i{
+    margin-left: 15px;
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+.español, .ingles{
+    display: inline-flex;
+}
+
+aside{
+    width:65%;
+    height:100%;
+    font: arial;
+    background-color: #eae2b7;
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+}
+
+aside i{
+    font-size: 30px;
+    color: #457b9d;
+    margin-left: 50px;
+    margin-top: 7px;
+}
+
+aside p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #343a40; 
+    margin-left: 50px;
+    margin-right: 20px;
+    text-align: justify;
+}
+
+aside h3{
+    font-weight: bold;
+    color: black;
+    margin-left: 15px;
+    margin-top:10px;
+}
+
+section{
+    display: inline-flex;
+}
+
+.perfil{
+    display: inline-flex;
+}
+
+hr{
+    border-color: #457b9d;
+    width: 675px;
+    height: 0.1px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.estudios{
+    display: inline-flex;
+}
+
+.estudios hr{
+    width: 634px;
+}
+
+.logros{
+    display: inline-flex;
+}
+
+.logros hr{
+    width: 482px;
+}
+
+.hobbies{
+    display: inline-flex;
+}
+
+.hobbies hr{
+    width: 650px;
+}
+
+.page-footer{
+    bottom: 10px;
+    right: 10px;
+    font-size: 16px arial;
+    font-weight: bold;
+}
+
+body{
+    background-color:#72efdd;
+}
+
+a{
+    color: white;
+    font-weight: bold;
+    font: arial;
+    display: inline-flex;
+}
+
+a i{
+    font-size: 30px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+a h3{
+    margin-left: 50px;
+}
