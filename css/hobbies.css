@@ -21,11 +21,6 @@ p{
         padding: 20px;
         font-size: 1.5em;
     }
-
-    .video{
-        width: 40%;
-        height: 40%;
-    }
 }
 
 @media (min-width: 800px) {
@@ -101,6 +96,12 @@ p{
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
+.article_video{
+    width: 600px;
+    height: 300px;
+}
+
 /*Fin del body */
 
 .footer{
