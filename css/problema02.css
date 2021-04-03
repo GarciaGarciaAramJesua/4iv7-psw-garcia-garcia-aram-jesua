@@ -1,0 +1,36 @@
+*{
+    background-color: #f8b334;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #a70e09ea;
+}
+
+a{
+    color:#a70e09ea;
+    text-decoration: none;
+}
+
+h1{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.td_up{
+    align-items: left;
+    justify-content: left;
+    width: 100;
+}
+
+.td_down{
+    align-items: center;
+    justify-content: center;
+    width: 150;
+}
+
+.input_text{
+    size:12;
+    border-width: 2px;
+    font-size: 10;
+    color: #a70e09ea;
+}
