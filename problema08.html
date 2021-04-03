@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 08</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/problema08.css">
+    <script src="./js/problema08.js"></script>
+</head>
+<body>
+    <h1>Encontrar el mayor</h1>
+    <p> Bienvenido(a), si deseas encontrar el número mayor entre 3, deberá ingresar los siguientes datos:
+    </p>
+
+    <form name="problema08" method="GET" action="problema08.html">
+        <table align="center" border="0">
+            <tr>
+                <td class= "td_up">Ingrese el primer número:</td>
+                <td class= "td_down"><input type="text" name="primnum" 
+                    onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class= "td_up">Ingrese el segundo número:</td>
+                <td class= "td_down"><input type="text" name="segnum" 
+                    onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class= "td_up">Ingrese el tercer número:</td>
+                <td class= "td_down"><input type="text" name="ternum" 
+                    onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class= "td_down"><input type="button" value="Encontrar el mayor" 
+                    name="enviar" onclick="encontrar()"></td>
+            </tr>
+            <tr>
+                <td class= "td_up">El número que es el mayor entre los 3 números ingresados es:</td>
+                <td class= "td_down"><input type="text" name="mayor" id="numayor"
+                    readonly="readonly" class="input_text"> </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class= "td_down"><input type="button" name="borrarr"
+                    value="Borrar" onclick="borrar()"></td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <center>
+        <a href="menuproblemas.html">Regresar al menú principal</a>
+    </center>
+</body>
+</html>

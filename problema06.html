@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 06</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/problema06.css">
+    <script src="./js/problema06.js"></script>
+</head>
+<body>
+    <h1>Edad</h1>
+    <p> Bienvenido(a), si desea saber cuál es su edad, deberá ingresar el siguiente dato:
+    </p>
+
+    <form name="problema06" method="GET" action="problema06.html">
+        <table align="center" border="0">
+            <tr>
+                <td class= "td_up">Ingrese el año de su nacimiento: p. ej. "1950"</td>
+                <td class= "td_down"><input type="text" name="añonaci" 
+                    onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class= "td_down"><input type="button" value="Calcular edad" 
+                    name="enviar" onclick="calcularedad()"></td>
+            </tr>
+            <tr>
+                <td class= "td_up">La edad que tiene usted es:</td>
+                <td class= "td_down"><input type="text" name="edad" id="cantidadedad"
+                    readonly="readonly" class="input_text"> </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class= "td_down"><input type="button" name="borrarr"
+                    value="Borrar" onclick="borrar()"></td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <center>
+        <a href="menuproblemas.html">Regresar al menú principal</a>
+    </center>
+</body>
+</html>

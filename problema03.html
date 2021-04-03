@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 03</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/problema03.css">
+    <script src="./js/problema03.js"></script>
+</head>
+<body>
+    <h1>Zaaraak</h1>
+    <p> Bienvenido(a) a la tienda Zaaraak. ¡Estamos de oferta! Ofrecemos un descuento del 15% sobre el total de su compra.
+    </p>
+
+    <form name="problema03" method="GET" action="problema03.html">
+        <table align="center" border="0">
+            <tr>
+            <td class= "td_up">Introduzca el valor de su compra: $</td>
+            <td class= "td_down"><input type="text" name="cantidad" 
+                onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class= "td_down"><input type="button" value="Descuento" 
+                    name="enviar" onclick="descuento()"></td>
+            </tr>
+            <tr>
+                <td class= "td_up">Su compra total con el descuento del 15% es de:</td>
+                <td class= "td_down"><input type="text" name="compratd" id="cantidadtd"
+                    readonly="readonly" class="input_text"> </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class= "td_down"><input type="button" name="borrarr"
+                    value="Borrar" onclick="borrar()"></td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <center>
+        <a href="menuproblemas.html">Regresar al menú principal</a>
+    </center>
+</body>
+</html>

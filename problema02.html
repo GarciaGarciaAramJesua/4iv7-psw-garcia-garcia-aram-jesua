@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 02</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/problema02.css">
+    <script src="./js/problema02.js"></script>
+</head>
+<body>
+    <h1>Sueldo más comisiones</h1>
+    <p> Bienvenido(a), si desea saber a cuánto asciende su salario mensual y su pago por comisiones,
+        deberá ingresar el siguiente dato:
+    </p>
+
+    <form name="problema02" method="GET" action="problema02.html">
+        <table align="center" border="0">
+            <tr>
+                <td class= "td_up">Ingrese la cantidad de su salario mensual:</td>
+                <td class= "td_down"><input type="text" name="salariomen"
+                    onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class= "td_down"><input type="button" value="Calcular cantidades" 
+                    name="enviar" onclick="porcentajes()"></td>
+            </tr>
+            <tr>
+                <td class= "td_up">El pago por comisión de sus ventas es:</td>
+                <td class= "td_down"><input type="text" name="pagoporv" id="pagoextra"
+                    readonly="readonly" class="input_text"> </td>
+            </tr>
+            <tr>
+                <td class= "td_up">El salario total que recibirá este mes es:</td>
+                <td class= "td_down"><input type="text" name="salariototal" id="salariotot"
+                    readonly="readonly" class="input_text"> </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class= "td_down"><input type="button" name="borrarr"
+                    value="Borrar" onclick="borrar()"></td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <center>
+        <a href="menuproblemas.html">Regresar al menú principal</a>
+    </center>
+</body>
+</html>

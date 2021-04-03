@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 04</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/problema04.css">
+    <script src="./js/problema04.js"></script>
+</head>
+<body>
+    <h1>Algoritmos</h1>
+    <p> Está en la materia de Algoritmos, para saber su calificación final debe saber primero que equivale al: <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;55% del promedio de sus 3 calificaciones parciales <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;30% de la calificación de su examen final <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Y 15% de la calificación de su trabajo final <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Por lo que deberá ingresar los siguientes datos:
+    </p>
+
+    <form name="problema04" method="GET" action="problema04.html">
+        <table align="center" border="0">
+            <tr>
+                <td class= "td_up">Ingrese la calificación de su primer parcial:</td>
+                <td class= "td_down"><input type="text" name="primparcial" 
+                    onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class= "td_up">Ingrese la calificación de su segundo parcial:</td>
+                <td class= "td_down"><input type="text" name="segparcial"
+                    onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class= "td_up">Ingrese la calificación de su tercer parcial:</td>
+                <td class= "td_down"><input type="text" name="terparcial"
+                    onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class= "td_up">Ingrese la calificación de su examen final:</td>
+                <td class= "td_down"><input type="text" name="examfinal"
+                    onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class= "td_up">Ingrese la calificación de su trabajo final:</td>
+                <td class= "td_down"><input type="text" name="trabafinal"
+                    onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class= "td_down"><input type="button" value="Calcular calificación" 
+                    name="enviar" onclick="calificacionfinal()"></td>
+            </tr>
+            <tr>
+                <td class= "td_up">Su calificación final de la materia Algoritmos es:</td>
+                <td class= "td_down"><input type="text" name="califinal" id="final"
+                    readonly="readonly" class="input_text"> </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class= "td_down"><input type="button" name="borrarr"
+                    value="Borrar" onclick="borrar()"></td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <center>
+        <a href="menuproblemas.html">Regresar al menú principal</a>
+    </center>
+</body>
+</html>

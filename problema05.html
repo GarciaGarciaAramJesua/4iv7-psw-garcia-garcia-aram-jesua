@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 05</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/problema05.css">
+    <script src="./js/problema05.js"></script>
+</head>
+<body>
+    <h1>Porcentajes</h1>
+    <p> Bienvenido(a) profesor(a), si desea saber cuál es el porcentaje de hombres que hay en su grupo y cuál el de mujeres,
+        deberá ingresar los siguientes datos:
+    </p>
+
+    <form name="problema05" method="GET" action="problema05.html">
+        <table align="center" border="0">
+            <tr>
+                <td class= "td_up">Ingrese el número de estudiantes que hay en su grupo:</td>
+                <td class= "td_down"><input type="text" name="numestud" 
+                    onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class= "td_up">Ingrese el número de hombres que hay en su grupo:</td>
+                <td class= "td_down"><input type="text" name="numhomb"
+                    onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td class= "td_up">Ingrese el número de mujeres que hay en su grupo:</td>
+                <td class= "td_down"><input type="text" name="nummuj"
+                    onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class= "td_down"><input type="button" value="Calcular porcentajes" 
+                    name="enviar" onclick="porcentajes()"></td>
+            </tr>
+            <tr>
+                <td class= "td_up">El porcentaje de hombres que hay en su grupo es:</td>
+                <td class= "td_down"><input type="text" name="porcehom" id="porcentah"
+                    readonly="readonly" class="input_text"> </td>
+            </tr>
+            <tr>
+                <td class= "td_up">El porcentaje de mujeres que hay en su grupo es:</td>
+                <td class= "td_down"><input type="text" name="porcemuj" id="porcentam"
+                    readonly="readonly" class="input_text"> </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class= "td_down"><input type="button" name="borrarr"
+                    value="Borrar" onclick="borrar()"></td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <center>
+        <a href="menuproblemas.html">Regresar al menú principal</a>
+    </center>
+</body>
+</html>

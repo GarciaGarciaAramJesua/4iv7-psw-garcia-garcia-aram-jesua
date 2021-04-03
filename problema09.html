@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 09</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/problema09.css">
+    <script src="./js/problema09.js"></script>
+</head>
+<body>
+    <h1>Salario de un trabajador</h1>
+    <p> Bienvenido(a), si desea saber a cuánto asciende el pago de sus horas de trabajo, 
+        deberá ingresar el siguiente dato:
+    </p>
+
+    <form name="problema09" method="GET" action="problema09.html">
+        <table align="center" border="0">
+            <tr>
+                <td class= "td_up">Ingrese el número de horas de trabajo incluyendo a las horas extras:</td>
+                <td class= "td_down"><input type="text" name="horastra" 
+                    onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class= "td_down"><input type="button" value="Calcular salario" 
+                    name="enviar" onclick="calcularsalario()"></td>
+            </tr>
+            <tr>
+                <td class= "td_up">El salario que le corresponde por sus horas de trabajo es:</td>
+                <td class= "td_down"><input type="text" name="salario" id="cantidadsa"
+                    readonly="readonly" class="input_text"> </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class= "td_down"><input type="button" name="borrarr"
+                    value="Borrar" onclick="borrar()"></td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <center>
+        <a href="menuproblemas.html">Regresar al menú principal</a>
+    </center>
+</body>
+</html>
