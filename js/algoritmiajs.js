@@ -93,7 +93,7 @@ function problema3(){
 
     for(var i=0; i< mayores.length; i++){
         if(mayores[i] == mayor){
-            caracteress.push(i);
+            caracteres.push(i);
         }
     }
     var res = '';
