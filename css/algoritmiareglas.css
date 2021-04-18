@@ -75,6 +75,8 @@ button.problema-button{
     border-radius: 5px;
     padding: 1rem;
     margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
 }
 
 table.problema-table{
