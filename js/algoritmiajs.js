@@ -89,16 +89,16 @@ function problema3(){
 
     var mayor = Math.max.apply(null, mayores);
 
-    var posiciones= [];
+    var caracteres= [];
 
     for(var i=0; i< mayores.length; i++){
         if(mayores[i] == mayor){
-            posiciones.push(i);
+            caracteress.push(i);
         }
     }
     var res = '';
-    posiciones.forEach(function (numero) {
-        res += p3_array[numero] + ',';
+    caracteres.forEach(function (cantidad) {
+        res += p3_array[cantidad] + ',';
     });
 
     document.querySelector('#p3-output').textContent = res + " = " + mayor + " caractéres únicos";
