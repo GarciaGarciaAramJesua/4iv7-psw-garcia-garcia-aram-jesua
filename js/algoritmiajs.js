@@ -1,4 +1,4 @@
-//problema 1 de tarea/
+//problema 1 de tarea
 
 function problema1(){
     var p1_input = document.querySelector('#p1-input').value;
@@ -66,7 +66,49 @@ function problema2(){
 
     //imprimir el resultado
     document.querySelector('#p2-output').textContent = 
-    'Producto escalar minimo : '+p2_producto;
+    'Producto escalar mínimo : '+p2_producto;
 }
 
 //el tres queda de tarea y el profe hace el 1
+function problema3(){
+    var p3_input = document.querySelector('#p3-input').value;
+
+    var p3_array = p3_input.split(',');
+
+    var mayores = [];
+
+    p3_array.forEach(function (palabra, i){
+        if(i != 0 || i != p3_array.length){ 
+            var p3_caracter = p3_array[i].split('');
+            var unicos = p3_caracter.filter(function(item, index, array) {
+                return array.indexOf(item) === index;
+            });
+        }
+        mayores.push(unicos.length);
+    }); 
+
+    var mayor = Math.max.apply(null, mayores);
+
+    var posiciones= [];
+
+    for(var i=0; i< mayores.length; i++){
+        if(mayores[i] == mayor){
+            posiciones.push(i);
+        }
+    }
+    var res = '';
+    posiciones.forEach(function (numero) {
+        res += p3_array[numero] + ',';
+    });
+
+    document.querySelector('#p3-output').textContent = res + " = " + mayor + " caractéres únicos";
+}
+
+function validarentrada(){
+    let validar = /^[A-Z]$/
+    validarinput3 = true;
+    validarinput3 = validar.test(document.querySelector('#p3-input').value);
+    if(validarinput3 == false){
+        alert("Solo se pueden ingresar letras mayúsculas, ingrese de nuevo la lista pero con mayúsculas");
+    }
+}
