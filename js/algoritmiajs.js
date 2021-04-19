@@ -105,8 +105,8 @@ function problema3(){
 }
 
 function validarentrada(){
-    let validar = /^[A-Z]$/
-    validarinput3 = true;
+    let validar = /^[A-Z]+$/;
+    validarinput3 == true;
     validarinput3 = validar.test(document.querySelector('#p3-input').value);
     if(validarinput3 == false){
         alert("Solo se pueden ingresar letras mayúsculas, ingrese de nuevo la lista pero con mayúsculas");
