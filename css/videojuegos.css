@@ -129,6 +129,14 @@ p{
     margin-bottom: 2rem;
 }
 
+.articleimg_img{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    border-left: 5px;
+}
+
 /*Fin del body */
 
 .footer{

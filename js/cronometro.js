@@ -6,6 +6,8 @@ let iniciar = document.getElementById('iniciar');
 
 let resetear = document.getElementById('resetear');
 
+let grabar = document.getElementById('grabar');
+
 let almacenarTiempos = document.getElementById('almacenarTiempos');
 
 let tiempo = 0;
@@ -22,12 +24,12 @@ function init(){
 
 function iniciarContador(){
     if(verificador == false){
-        var intervalo = setInterval(function (){
+        intervalo = setInterval(function(){
             tiempo += 0.01;
             temporizador.innerHTML = tiempo.toFixed(2);
         }, 10);
         verificador = true;
-    }else{
+    } else {
         verificador = false;
         clearInterval(intervalo);
     }
