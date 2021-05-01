@@ -47,8 +47,8 @@ public class Consultar extends HttpServlet {
         String url = "jdbc:mysql:3306//localhost/registro4iv7ggaj";
                     //driver:gestorbd:puerto//IP/nombrebd
                     
-        String userName = "root";
-        String password = "Aram2004";
+        String userName = "bdb01263b39425";
+        String password = "dc50908f";
         
         try{
             
@@ -58,7 +58,7 @@ public class Consultar extends HttpServlet {
             por ello que pueden mandar un error, en ese caso
             url = "jdbc:mysql://localhost/registro4iv7ggaj";
             */
-            url = "jdbc:mysql://localhost/registro4iv7ggaj";
+            url = "jdbc:mysql://us-cdbr-east-03.cleardb.com:3306/heroku_891dae52504be37";
             con = DriverManager.getConnection(url, userName, password);
             set = con.createStatement();
             
