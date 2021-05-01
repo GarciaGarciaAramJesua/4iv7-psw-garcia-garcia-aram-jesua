@@ -82,8 +82,9 @@ public class Registro extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             
-            String nom, appat, apmat, correo, ip, ipr;
-            int edad, puerto, puertor;
+            String nom, appat, apmat, correo, validacion, validacionnonormal, nombrecompleto;
+            int edad;
+            boolean continuar = true;
             
             nom = request.getParameter("nombre");
             appat = request.getParameter("appat");
@@ -91,11 +92,40 @@ public class Registro extends HttpServlet {
             edad = Integer.parseInt(request.getParameter("edad"));
             correo = request.getParameter("correo");
             
-            ip = request.getLocalAddr();
-            puerto = request.getLocalPort();
+            nombrecompleto = nom + appat + apmat;
+            validacion = "qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM "
+                    + "áéóúíÁÉÍÓÚ";
+            validacionnonormal= validacion + "._@-,$&0123456789";
             
-            ipr = request.getRemoteAddr();
-            puertor = request.getRemotePort();
+            for(int i=0; i<nombrecompleto.length(); i++){
+                char caracter = nombrecompleto.charAt(i);
+                for(int j = 0; j < validacion.length(); j++){
+                    if(caracter == validacion.charAt(j) || String.valueOf(caracter).equals("ñ")|| String.valueOf(caracter).equals("Ñ"))
+                        break;
+                    if(j == (validacion.length()-1)){
+                        continuar = false;
+                        break;
+                    }
+                }
+            }
+            
+            for(int i=0; i<correo.length(); i++){
+                char caracter = correo.charAt(i);
+                for(int j = 0; j < validacionnonormal.length(); j++){
+                    if(caracter == validacionnonormal.charAt(j))
+                        break;
+                    if(j == (validacionnonormal.length()-1)){
+                        continuar = false;
+                        break;
+                    }
+                }
+            }
+            
+            if(edad<1){
+                    continuar = false;
+            }
+            
+            if(continuar==true){
             
             try{
             
@@ -114,9 +144,15 @@ public class Registro extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Registro</title>");            
+            out.println("<title>Servlet Registro</title>");
+            out.println("<meta charset='UTF-8'>");
+            out.println("<meta http-equiv='X-UA-Compatible' content='IE=edge'>");
+            out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
+            out.println("<link rel='preconnect' href='https://fonts.gstatic.com'>");
+            out.println("<link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap' rel='stylesheet'>");
             out.println("</head>");
-            out.println("<body>"
+            out.println("<body style=\"color: #a70e09ea; background-color: #ebdc8b; font-family: 'Poppins', sans-serif; font-weight: bold;\" align=\"center\">"
+                    + "<h1 style=\"font-weight: bold;\" align=\"center\">Registro de Usuarios</h1>"
                     + "<br>"
                     + "Tu nombre es: " +nom
                     + "<br>"
@@ -127,19 +163,23 @@ public class Registro extends HttpServlet {
                     + "Tu edad es: " +edad
                     + "<br>"
                     + "Tu email es: " +correo
-                    + "<br>"
-                    + "IP Local: " +ip
-                    + "<br>"
-                    + "Puerto Local: " +puerto
-                    + "<br>"
-                    + "IP Remota: " +ipr
-                    + "<br>"
-                    + "Puerto Remoto: " +puertor
                     + "<br>");
-            out.println("<h1>Registro Exitoso</h1>"
-                    + "<a href='index.html'>Regresar al Menú Principal</a>"
+            out.println("<h1 style=\"font-weight: bold;\" align=\"center\">Registro Exitoso</h1>"
+                    + "<br><br>"
+                    + "<a style=\"text-decoration: none;\" href='index.html'>"
+                    + "<div style=\"font-family: 'Poppins', sans-serif; border-radius: 5px; width: 20%;" 
+                    + "color: white; background-color: #a70e09ea; margin-left: 30rem; text-align: center;\">" 
+                    + "Regresar al Menú Principal</div></a>"
                     + "<br>" 
-                    + "<a href='Consultar'>Consultar la Tabla General de Usuarios</a>");
+                    + "<a style=\"text-decoration: none;\" href='Consultar'>"
+                    + "<div style=\"font-family: 'Poppins', sans-serif; border-radius: 5px; width: 20%;" 
+                    + "color: white; background-color: #a70e09ea; margin-left: 30rem; text-align: center;\">"
+                    + "Consultar la Tabla General de Usuarios</div></a>"
+                    + "<br>"
+                    + "<a style=\"text-decoration: none;\" href='Registro.html'>"
+                    + "<div style=\"font-family: 'Poppins', sans-serif; border-radius: 5px; width: 20%;"
+                    + "color: white; background-color: #a70e09ea; margin-left: 30rem; text-align: center;\">"
+                    + "Registrar otro usuario</div></a>");
             out.println("</body>");
             out.println("</html>");
             
@@ -153,11 +193,53 @@ public class Registro extends HttpServlet {
                 out.println("<!DOCTYPE html>");
                 out.println("<html>");
                 out.println("<head>");
-                out.println("<title>Servlet Registro</title>");            
+                out.println("<title>Servlet Registro</title>");
+                out.println("<meta charset='UTF-8'>");
+                out.println("<meta http-equiv='X-UA-Compatible' content='IE=edge'>");
+                out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
+                out.println("<link rel='preconnect' href='https://fonts.gstatic.com'>");
+                out.println("<link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap' rel='stylesheet'>");
                 out.println("</head>");
-                out.println("<body>"
-                        + "<h1>No se pudo registrar, hubo un error</h1>"
-                        + "<a href='index.html'>Regresar al Menú Principal</a>");
+                out.println("<body style=\"color: #a70e09ea; background-color: #ebdc8b; font-family: 'Poppins', sans-serif;\" align=\"center\">"
+                        + "<h1 style=\"font-weight: bold;\" align=\"center\">Registro no realizado</h1>"
+                        + "<label>No se pudo realizar el registro, hubo un error.</label>"
+                        + "<br><br>"
+                        + "<a style=\"text-decoration: none;\" href='index.html'>"
+                        + "<div style=\"font-family: 'Poppins', sans-serif; border-radius: 5px; width: 20%;" 
+                        + "color: white; background-color: #a70e09ea; margin-left: 30rem; text-align: center;\">" 
+                        + "Regresar al Menú Principal</div></a>"
+                        + "<br>" 
+                        + "<a style=\"text-decoration: none;\" href='Registro.html'>"
+                        + "<div style=\"font-family: 'Poppins', sans-serif; border-radius: 5px; width: 20%;"
+                        + "color: white; background-color: #a70e09ea; margin-left: 30rem; text-align: center;\">"
+                        + "Intentar registrar el usuario de nuevo</div></a>");
+                out.println("</body>");
+                out.println("</html>");
+            }
+            }else{
+                out.println("<!DOCTYPE html>");
+                out.println("<html>");
+                out.println("<head>");
+                out.println("<title>Servlet Registro</title>");
+                out.println("<meta charset='UTF-8'>");
+                out.println("<meta http-equiv='X-UA-Compatible' content='IE=edge'>");
+                out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
+                out.println("<link rel='preconnect' href='https://fonts.gstatic.com'>");
+                out.println("<link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap' rel='stylesheet'>");
+                out.println("</head>");
+                out.println("<body style=\"color: #a70e09ea; background-color: #ebdc8b; font-family: 'Poppins', sans-serif;\" align=\"center\">"
+                        + "<h1 style=\"font-weight: bold;\" align=\"center\">Registro no realizado</h1>"
+                        + "<label>Se ingresó un dato que no fue validado por el sistema, intente de nuevo.</label>"
+                        + "<br><br>"
+                        + "<a style=\"text-decoration: none;\" href='index.html'>"
+                        + "<div style=\"font-family: 'Poppins', sans-serif; border-radius: 5px; width: 20%;" 
+                        + "color: white; background-color: #a70e09ea; margin-left: 30rem; text-align: center;\">" 
+                        + "Regresar al Menú Principal</div></a>"
+                        + "<br>" 
+                        + "<a style=\"text-decoration: none;\" href='Registro.html'>"
+                        + "<div style=\"font-family: 'Poppins', sans-serif; border-radius: 5px; width: 20%;"
+                        + "color: white; background-color: #a70e09ea; margin-left: 30rem; text-align: center;\">"
+                        + "Intentar registrar el usuario de nuevo</div></a>");
                 out.println("</body>");
                 out.println("</html>");
             }

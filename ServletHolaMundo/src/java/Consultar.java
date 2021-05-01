@@ -18,7 +18,6 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 //de poder realizar las consultas a la bd
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import javax.servlet.ServletConfig;
 
 /**
@@ -96,17 +95,22 @@ public class Consultar extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Consultar</title>");            
+            out.println("<title>Consultar Usuarios</title>");
+            out.println("<meta charset='UTF-8'>");
+            out.println("<meta http-equiv='X-UA-Compatible' content='IE=edge'>");
+            out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
+            out.println("<link rel='preconnect' href='https://fonts.gstatic.com'>");
+            out.println("<link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap' rel='stylesheet'>");
             out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Tabla General de Usuarios</h1>");
-            out.println("<table border='2'>"
+            out.println("<body style=\"color: #a70e09ea; background-color: #f8b334; font-family: 'Poppins', sans-serif;\" align=\"center\">");
+            out.println("<h1 style='font-weight: bold;' align='center'>Tabla General de Usuarios</h1>");
+            out.println("<table align='center' style=\"border: 1px solid #a70e09ea;\">"
                     + "<thead>"
                     + "<tr>"
-                    + "<th>ID</th>"
-                    + "<th>Nombre Completo</th>"
-                    + "<th>Edad</th>"
-                    + "<th>Correo</th>"
+                    + "<th style=\"border-bottom: 1px solid #a70e09ea; border-right: 1px solid #a70e09ea;\">ID</th>"
+                    + "<th style=\"border-bottom: 1px solid #a70e09ea; border-right: 1px solid #a70e09ea;\">Nombre Completo</th>"
+                    + "<th style=\"border-bottom: 1px solid #a70e09ea; border-right: 1px solid #a70e09ea;\">Edad</th>"
+                    + "<th style=\"border-bottom: 1px solid #a70e09ea;\">Correo</th>"
                     + "</tr>"
                     + "</thead>"
                     + "<tbody>");
@@ -126,9 +130,9 @@ public class Consultar extends HttpServlet {
                     edad = rs.getInt("edad_usu");
                     correo = rs.getString("email_usu");
                     out.println("<tr>"
-                            + "<td>" +id+ "</td>"
-                            + "<td>" +nom+" "+appat+" "+apmat+"</td>"
-                            + "<td>" +edad+ "</td>"
+                            + "<td style=\" border-right: 1px solid #a70e09ea;\">" +id+ "</td>"
+                            + "<td style=\" border-right: 1px solid #a70e09ea;\">" +nom+" "+appat+" "+apmat+"</td>"
+                            + "<td style=\" border-right: 1px solid #a70e09ea;\">" +edad+ "</td>"
                             + "<td>" +correo+ "</td>"
                             + "</tr>");
                 }
@@ -147,11 +151,18 @@ public class Consultar extends HttpServlet {
             out.println("</tbody>"
                     + "</table>"
                     + "<br>"
-                    + "<a href='index.html'>Regresar al Formulario</a>");
+                    + "<a style=\"text-decoration: none;\" href='index.html'>"
+                    + "<div style=\"font-family: 'Poppins', sans-serif; border-radius: 5px; width: 20%;" 
+                    + "color: white; background-color: #a70e09ea; margin-left: 30rem; text-align: center;\">" 
+                    + "Regresar al Menú Principal</div></a>"
+                    + "<br>"
+                    + "<a style=\"text-decoration: none;\" href='Registro.html'>"
+                    + "<div style=\"font-family: 'Poppins', sans-serif; border-radius: 5px; width: 20%;"
+                    + "color: white; background-color: #a70e09ea; margin-left: 30rem; text-align: center;\">"
+                    + "Registrar otro usuario</div></a>");
             out.println("</body>");
             out.println("</html>");
-        }
-        
+        } 
     }
 
     /**
@@ -175,7 +186,7 @@ public class Consultar extends HttpServlet {
      */
     @Override
     
-     public void destroy(){
+    public void destroy(){
         try{
             con.close();
 

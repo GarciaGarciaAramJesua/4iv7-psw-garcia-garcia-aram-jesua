@@ -1,71 +1,49 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>Registro de Usuarios</title>
+        <title>CRUD de Usuarios</title>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/Masterstyle.css">
     </head>
     <body>
-        <div class="container">
-            <div class="contenedorRegistro">
-                <form method="post" name="formulario" action="Registro">
-                    <label>Nombre: </label>
-                    <br>
-                    <input type="text" name="nombre">
-                    <br>
-                    <label>Apellido Paterno: </label>
-                    <br>
-                    <input type="text" name="appat">
-                    <br>
-                    <label>Apellido Materno: </label>
-                    <br>
-                    <input type="text" name="apmat">
-                    <br>
-                    <label>Edad: </label>
-                    <br>
-                    <input type="number" name="edad">
-                    <br>
-                    <label>Email: </label>
-                    <br>
-                    <input type="email" name="correo">
-                    <br>
-                    <input type="submit" value="Registrar Usuario">
-                    <input type="reset" value="Borrar Datos">
-                </form>
+        <div class="fond" align="center">
+            <div style="width: 1000px;">
+                <div class="style_prevu_kit"
+                style="background-color: #cb2025;">
+                <br><br><br><a class="links" href="Registro.html">Registro de Usuarios</a>
+                </div>
+                <div class="style_prevu_kit"
+                style="background-color: #f8b334;">
+                <br><br><br><form method="get" name="formularioconsultar" action="Consultar">
+                                <input type="submit" value="Consultar Tabla General de Usuarios" 
+                                    style="font-family: 'Poppins'; color: white; border: none; background-color: #f8b334;
+                                    font-size: 18px;">
+                        </form>
+                </div>
+                <br>
+                <div class="style_prevu_kit"
+                style="background-color: #97fb0d;">
+                <br><br><br><a class="links" href="Modificar.html">Modificar Usuarios</a>
+                </div>
+                <div class="style_prevu_kit"
+                style="background-color: #00a096;">
+                <br><br><br><a class="links" href="Eliminar.html">Eliminar Usuarios</a>
+                </div>
+                <div style="padding: 5px; color: #a70e09ea;
+                font-weight: 300; font-size: 30px; font-family: 'Poppins', sans-serif;
+                padding-top: 20px;">CRUD <font style="font-weight: 400;">USUARIOS</font>
+                <br>
             </div>
         </div>
-        <br>
-        <div class="contenedorConsultar">
-            <br>
-            <form method="get" name="formularioconsultar" action="Consultar">
-                <input type="submit" value="Consultar Tabla General de Usuarios" >
-            </form>
-        </div>
-        <br>
-        <div class="contenedorEliminar" >
-            <br>
-            <form method="post" name="formularioeliminar" action="Eliminar">
-                <label>Ingresa el ID del usuario que deseas eliminar</label>
-                <input type="text" name="ideliminar" >
-                <input type="submit" value="Eliminar Usuario" >
-            </form>
-        </div>
-        <br>
-        <div class="contenedorActualizar" >
-            <form>
-                <label>Tarea wiiiiii UwU/
-                quiero que se pueda actualizar los datos de los registros, por ejemplo
-                que se pueda cambiar:
-                nombre, appat, apmat, edad, correo o todos los datos
-                Es por ello que deben de ocupar 
-                UPDATE mregistro SET appat_usu = variable1 where id_usu = variable2 </label>
-            </form>
-        </div>
+        
+        <footer class= "page-footer">
+            Por García García Aram Jesua 4IV7 <br>
+            Pd: Hoy es mi cumple -_-
+        </footer>
     </body>
 </html>
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Modificar Usuario</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body style="color: #a70e09ea; background-color: #97fb0d; font-family: 'Poppins', sans-serif; font-weight: bold;" align="center">
+        <h1 style="font-weight: bold;" align="center">Modificación de Usuarios</h1>
+        <div class="contenedorModificar">
+            <p>Bienvenido al apartado de modificación de usuarios, si desea modificar a un usuario sólo ingrese
+               el id del usuario que desea modificar y elija los criterios de modificación por favor: </p>
+            <form method="post" name="formulariomodificar" action="Modificar">
+                <div style="margin-bottom: 15px;">
+                    <label>Ingresa el ID del usuario que deseas modificar: </label>
+                    <input style="font-family: 'Poppins', sans-serif; font-weight: bold; color: #a70e09ea; background-color: #009933;" 
+                        type="text" name="idmodificar">
+                </div>
+                <label style="margin-top: 30px;">Seleccione el criterio: </label>
+                <select style="color: #ebdc8b; background-color: #009933; 
+                            font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: bold;" name="Criterio" id="Criterio">
+                    <option style="color: #ebdc8b; background-color: #009933; 
+                            font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: bold;" value="Nombre" selected>Nombre</option>
+                    <option style="color: #ebdc8b; background-color: #009933; 
+                            font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: bold;" value="ApePater" >Apellido Paterno</option>
+                    <option style="color: #ebdc8b; background-color: #009933; 
+                            font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: bold;" value="ApeMater">Apellido Materno</option>
+                    <option style="color: #ebdc8b; background-color: #009933; 
+                            font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: bold;" value="Edad" >Edad</option>
+                    <option style="color: #ebdc8b; background-color: #009933; 
+                            font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: bold;" value="Correo" >Correo</option>
+                </select><br>
+                <br><label>Ingrese la modificación que desea realizar: </label>
+                <input style="font-family: 'Poppins', sans-serif; font-weight: bold; color: #a70e09ea; background-color: #009933;" 
+                       type="text" name="modificacion" maxlength="45" required>
+                <br><br><input align="center" style="font-family: 'Poppins'; font-weight: bold; color: #ebdc8b; border: none; background-color: #009933; font-size: 18px;" 
+                    type="submit" value="Modificar Usuario"><br><br><br>
+            </form>
+            <a style="text-decoration: none;" href='index.html'>
+            <div style="font-family: 'Poppins', sans-serif; border-radius: 5px; width: 20%; 
+                color: #ebdc8b; background-color: #a70e09ea; margin-left: 30rem; text-align: center;"> 
+                Regresar al Menú Principal</div></a>
+        </div>
+    </body>
+</html>

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Eliminar;
+
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -19,7 +19,6 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 //de poder realizar las consultas a la bd
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import javax.servlet.ServletConfig;
 
 
@@ -109,13 +108,22 @@ public class Eliminar extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Eliminar</title>");            
+            out.println("<title>Servlet Eliminar</title>");
+            out.println("<meta charset='UTF-8'>");
+            out.println("<meta http-equiv='X-UA-Compatible' content='IE=edge'>");
+            out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
+            out.println("<link rel='preconnect' href='https://fonts.gstatic.com'>");
+            out.println("<link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap' rel='stylesheet'>");
             out.println("</head>");
-            out.println("<body>");
-
+            out.println("<body style=\"color: #ebdc8b; background-color: #00a096; font-family: 'Poppins', sans-serif;\" align=\"center\">");
+            out.println("<h1 style='font-weight: bold;' align='center'>Usuario Eliminado</h1>");
             int id;
 
             id = Integer.parseInt(request.getParameter("ideliminar"));
+            boolean continuar =true;
+            if(id < 1){
+                continuar = false;
+            }
 
             /*
             para poder eliminar es 
@@ -124,26 +132,42 @@ public class Eliminar extends HttpServlet {
             String q = "delete from mregistro where id_usu = "+id;
             try{
 
-                set.executeUpdate(q);
-                System.out.println("Registro eliminado con exito");
-
-                out.println("<h1>Registro Eliminado</h1>");
+                if(continuar == true){
+                    set.executeUpdate(q);
+                    System.out.println("Registro eliminado con exito");
+                    out.println("<h3 style='font-weight: bold;' align='center'>El registro con el id: " +id
+                        + " fue eliminado.</h3>");
+                }
+                else{
+                    out.println("<h3 style='font-weight: bold;' align='center'>El registro con el id: " +id
+                        + " no fue eliminado, ocurrió un error.</h3>");
+                }
             }catch(Exception e){
-                out.println("<h1>Registro No Eliminado, sucedio un error</h1>");
+                out.println("<h3>El registro con el id: " +id
+                        + " no fue eliminado, sucedió un error al eliminarlo.</h3>");
                 System.out.println("Error al eliminar el registro");
                 System.out.println(e.getMessage());
                 System.out.println(e.getStackTrace());
 
             }
 
-            out.println("<a href='index.html'>Regresar al Formulario</a>"
+            out.println("<br><br><br><br><br><br><a style=\"text-decoration: none;\" href='index.html'>"
+                    + "<div style=\"font-family: 'Poppins', sans-serif; border-radius: 5px; width: 20%;" 
+                    + "color: white; background-color: #a70e09ea; margin-left: 30rem; text-align: center;\">" 
+                    + "Regresar al Menú Principal</div></a>"
+                    + "<br>" 
+                    + "<a style=\"text-decoration: none;\" href='Consultar'>"
+                    + "<div style=\"font-family: 'Poppins', sans-serif; border-radius: 5px; width: 20%;" 
+                    + "color: white; background-color: #a70e09ea; margin-left: 30rem; text-align: center;\">"
+                    + "Consultar la Tabla General de Usuarios</div></a>"
                     + "<br>"
-                    + "<a href='Registro'>Registrar un Nuevo Usuario</a>"
-                    + "<br>"
-                    + "<a href='Consultar'>Consultar la Tabla General de Usuarios</a>");
+                    + "<a style=\"text-decoration: none;\" href='Registro.html'>"
+                    + "<div style=\"font-family: 'Poppins', sans-serif; border-radius: 5px; width: 20%;"
+                    + "color: white; background-color: #a70e09ea; margin-left: 30rem; text-align: center;\">"
+                    + "Registrar otro usuario</div></a>");
             out.println("</body>");
             out.println("</html>");
-        }
+        } 
     }
 
     /**
